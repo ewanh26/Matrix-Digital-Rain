@@ -29,6 +29,14 @@ public class Window extends JFrame {
       @Override
       public void keyPressed(KeyEvent e) {
         if (e.getKeyCode() == KeyEvent.VK_ESCAPE) System.exit(0);
+        if (e.getKeyCode() == KeyEvent.VK_P) setSize(new Dimension(9 * SF, 16 * SF));
+        if (e.getKeyCode() == KeyEvent.VK_L) setSize(new Dimension(16 * SF, 9 * SF));
+        if (e.getKeyCode() == KeyEvent.VK_D) {
+          surface.getRootPane().setWindowDecorationStyle(JRootPane.FRAME);
+        }
+        if (e.getKeyCode() == KeyEvent.VK_U) {
+          surface.getRootPane().setWindowDecorationStyle(JRootPane.NONE);
+        }
       }
     });
 
